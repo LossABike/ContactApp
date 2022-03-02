@@ -11,23 +11,23 @@ const router = express.Router();
     //retrieve all contacts 
     router.get("/", contacts.findAll);
     
-    //retrieve all favorite contact
-    router.get("/favorite", contacts.findAllFavorite);
+    // //retrieve all fav//orite contact
+     router.get("/favorite", contacts.findAllFavorite);
 
-    //retrieve single with id
+    // //retrieve single with id
     router.get("/:id", contacts.findOne);
     
-    //update single with id
-    router.put("/:id", contacts.update);
+    // //update single with id
+     router.put("/:id", contacts.update);
 
      
-    //dalete single with id
-    router.put("/:id", contacts.delete);
+    // //dalete single with id
+     router.delete("/:id", contacts.delete);
     
-    //delete all with id
-    router.delete("/:id", contacts.deleteAll);
+    // //delete all 
+     router.delete("/", contacts.deleteAll);
 
-    //app.use("api/contacts", router);
+    // //app.use("api/contacts", router);
 
 
 module.exports = router;
